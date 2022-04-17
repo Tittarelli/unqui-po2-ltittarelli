@@ -2,6 +2,9 @@ package ar.edu.unq.po2.tp3;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,16 +15,7 @@ class CounterTests {
 	@BeforeEach
 	void setUp() throws Exception {
 	counter = new Counter();
-	counter.addNumber(1);
-	counter.addNumber(3);
-	counter.addNumber(5);
-	counter.addNumber(7);
-	counter.addNumber(9);
-	counter.addNumber(1);
-	counter.addNumber(1);
-	counter.addNumber(1);
-	counter.addNumber(1);
-	counter.addNumber(4);
+	counter.addNumbers(Arrays.asList(1,3,5,7,9,1,1,1,1,4));
 	}
 
 	@Test
@@ -81,4 +75,29 @@ class CounterTests {
 		counter.addNumber(12);
 		assertEquals(3, counter.multiplesOf(3));
 	}
+	
+	@Test
+	void testTheNumber23HasOneEvenDigit() {
+		assertEquals(1, counter.evenDigitsIn(23)); 
+	}
+	
+	@Test
+	void testTheNumber335HasNotEvenDigits() {
+		assertEquals(0, counter.evenDigitsIn(335));
+	}
+	
+	@Test
+	void testNumberWithMaxEvenDigitsInAList() {
+		List<Integer> numbers = Arrays.asList(234,222459,5797);
+	
+		assertEquals(222459, counter.maxEvenDigitsNumberIn(numbers));
+	}
+	
+	@Test
+	void testNumberWithMaxEvenDigitsIsNotTheIncorrect() {
+		List<Integer> numbers = Arrays.asList(2,22,222,2222,22222,22222);
+		
+		assertNotEquals(22, counter.maxEvenDigitsNumberIn(numbers));
+	}
+	
 }
