@@ -100,4 +100,21 @@ class CounterTests {
 		assertNotEquals(22, counter.maxEvenDigitsNumberIn(numbers));
 	}
 	
+	@Test
+	void multiplesOf3Below15() {
+		List<Integer> multiples = Arrays.asList(3,6,9,12,15);
+		assertEquals(multiples, counter.multiplesOfANumberBelow(3, 15));
+	}
+	
+	@Test
+	void highestNumberBelowThousandThatIsMultipleOf3and9AtTheSameTime() {
+		assertEquals(999, counter.highestMultipleOf(3, 9));
+	}
+	
+	@Test 
+	void aPairOfNumbersWithoutCommonMultiple(){
+		assertEquals(-1, counter.highestMultipleOf(887, 899));
+		
+	}
+	
 }
