@@ -3,7 +3,7 @@ package ar.edu.unq.po2.tp3;
 
 public class Rectangle {
 
-	private Point origin;
+	Point origin;
 	private int width;
 	private int height;
 	
