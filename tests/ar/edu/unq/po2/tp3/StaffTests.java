@@ -28,7 +28,7 @@ class StaffTests {
 		assertEquals(34, staff.ageAverage());
 	}
 	
-	/*@Test
+	@Test
 	void testTeamAgeAverageWithFloatResult() {
 		Person p1 = Person.namedAndBorn("Leandro", LocalDate.of(2017, Month.MARCH, 10));
 		Person p2 = Person.namedAndBorn("Ayelén", LocalDate.of(2018, Month.MARCH, 18));
@@ -36,8 +36,5 @@ class StaffTests {
 		assertEquals(4.5, staff.ageAverage());
 	}
 	
-	Este test falla, preguntar sobre casteo.
-	
-	*/
 
 }

@@ -18,8 +18,8 @@ public class Staff {
 		return new Staff(staffName, members);
 	}
 
-	public float ageAverage() {
-		return (float) (members.stream().map(Person::age).reduce(0, Integer::sum) / members.size());
+	public Double ageAverage() {
+		return (members.stream().mapToInt(person -> person.age()).asDoubleStream().sum() / members.size());
 	}
 
 }
