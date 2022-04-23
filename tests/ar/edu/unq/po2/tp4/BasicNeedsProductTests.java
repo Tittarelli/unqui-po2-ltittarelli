@@ -11,7 +11,7 @@ class BasicNeedsProductTests {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		milk = BasicNeedsProduct.create("Milk", 8);
+		milk = BasicNeedsProduct.createDiscounting("Milk", 8, 10);
 	}
 
 	@Test
