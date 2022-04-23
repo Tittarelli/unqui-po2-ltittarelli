@@ -19,7 +19,7 @@ public class Staff {
 	}
 
 	public Double ageAverage() {
-		return (members.stream().mapToInt(person -> person.age()).asDoubleStream().sum() / members.size());
+		return (members.stream().mapToInt(Person::age).asDoubleStream().sum() / members.size());
 	}
 
 }
